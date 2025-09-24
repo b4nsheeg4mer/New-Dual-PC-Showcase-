@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AJ’s Dual-PC Setup</title>
+  <meta name="description" content="AJ (aka B4nsheeG4mer) – Dual-PC showcase with a high-end Gaming PC and a dedicated Streaming PC. Specs, details, and chill vibes." />
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0a0f1f;
+      color: #f0f0f0;
+    }
+    header {
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #333;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #9c8cff;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .tab {
+      padding: 10px 20px;
+      margin: 0 5px;
+      background: #1e2238;
+      border: 1px solid #444;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+    .tab.active {
+      background: #6b5cff;
+      color: white;
+    }
+    .panel {
+      display: none;
+      max-width: 800px;
+      margin: 0 auto;
+      background: #1a1f33;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+    .panel.active {
+      display: block;
+    }
+    .panel h2 {
+      margin-top: 0;
+      font-size: 1.4rem;
+      color: #9c8cff;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 8px 12px;
+      border-bottom: 1px solid #333;
+      text-align: left;
+    }
+    th {
+      color: #aaa;
+      font-weight: normal;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AJ’s Dual-PC Setup</h1>
+    <p>aka B4nsheeG4mer • Fortnite • Chill vibes</p>
+  </header>
+
+  <div class="tabs">
+    <div class="tab active" data-tab="gaming">Gaming PC</div>
+    <div class="tab" data-tab="streaming">Streaming PC</div>
+  </div>
+
+  <div id="gaming" class="panel active">
+    <h2>Gaming PC (H9 Elite + 12900K + 4070)</h2>
+    <table>
+      <tr><th>CPU</th><td>Intel Core i9-12900K (16-core, 3.2 GHz base)</td></tr>
+      <tr><th>Cooler</th><td>NZXT Kraken Elite 360 RGB AIO</td></tr>
+      <tr><th>Motherboard</th><td>MSI MPG Z790 EDGE WIFI</td></tr>
+      <tr><th>RAM</th><td>64GB DDR5-6000 (G.Skill Trident Z5 RGB)</td></tr>
+      <tr><th>Storage</th><td>SN550 1TB NVMe + 980 Pro 2TB NVMe + 870 EVO 1TB SATA + WD Blue 2TB HDD</td></tr>
+      <tr><th>GPU</th><td>MSI VENTUS 3X OC GeForce RTX 4070 12GB</td></tr>
+      <tr><th>Case</th><td>NZXT H9 Elite (Mid Tower)</td></tr>
+      <tr><th>Fans</th><td>Lian Li Uni Fan SL-Infinity 120mm (10 total)</td></tr>
+      <tr><th>PSU</th><td>EVGA SuperNOVA 1000 GT (80+ Gold, 1000W)</td></tr>
+      <tr><th>Cables</th><td>Lian Li Strimer Plus V2 (24-pin + 8-pin)</td></tr>
+      <tr><th>OS</th><td>Windows 11</td></tr>
+    </table>
+  </div>
+
+  <div id="streaming" class="panel">
+    <h2>Streaming PC (B550 + Ryzen 5 5500 + RTX 4060)</h2>
+    <table>
+      <tr><th>CPU</th><td>AMD Ryzen 5 5500</td></tr>
+      <tr><th>GPU</th><td>NVIDIA GeForce RTX 4060</td></tr>
+      <tr><th>Motherboard</th><td>MAG B550 TOMAHAWK MAX WIFI</td></tr>
+      <tr><th>RAM</th><td>16GB DDR4-3000</td></tr>
+      <tr><th>Storage</th><td>T-Force 1TB NVMe SSD</td></tr>
+      <tr><th>Case</th><td>N/A</td></tr>
+      <tr><th>Fans</th><td>N/A</td></tr>
+      <tr><th>PSU</th><td>N/A</td></tr>
+      <tr><th>OS</th><td>Windows 11</td></tr>
+    </table>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const panels = document.querySelectorAll('.panel');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
